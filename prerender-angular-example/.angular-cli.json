@@ -27,6 +27,19 @@
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
+    },
+    {
+      "name": "prerender",
+      "platform": "server",
+      "root": "src",
+      "outDir": "dist-prerender",
+      "main": "main.prerender.ts",
+      "tsconfig": "tsconfig.prerender.json",
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
     }
   ],
   "e2e": {

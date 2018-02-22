@@ -19,7 +19,7 @@ import { routingModule } from './app.routes';
     BrewsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'prerender-angular-example' }),
     routingModule
   ],
   providers: [],
