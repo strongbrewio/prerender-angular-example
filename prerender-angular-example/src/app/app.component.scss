@@ -1,0 +1,22 @@
+:host {
+  .navigation {
+    display: flex;
+    ul {
+      display: flex;
+      flex-direction: row;
+    }
+    li {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        background: #333;
+        padding: 10px;
+        color: #fff;
+        margin-right: 1px;
+        &:hover {
+          background: #ccc;
+        }
+      }
+    }
+  }
+}
