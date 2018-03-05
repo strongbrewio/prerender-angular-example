@@ -4,6 +4,7 @@ import * as fs from 'fs';
 import { enableProdMode } from '@angular/core';
 import { renderModuleFactory } from '@angular/platform-server';
 import { AppPrerenderModuleNgFactory } from './dist-prerender/main.bundle';
+const minify = require('html-minifier').minify;
 
 const distFolder = './dist';
 const index = fs
@@ -35,7 +36,7 @@ function renderToHtml(url: string, folderPath: string): void {
         if (url !== '/index.html') {
             fs.mkdirSync(folderPath);
         }
-        fs.writeFile(folderPath + '/index.html', html, function (err) {
+        fs.writeFile(folderPath + '/index.html', minify(html), function (err) {
             if (err) {
                 throw err;
             }
